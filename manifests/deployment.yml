@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: folasoftpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: folasoftpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: folasoftpipelinesjavascriptdocker 
+          image: myacrfolasoft45.azurecr.io/folasoftpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
